@@ -37,7 +37,36 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+#     'api.apps.ApiConfig',
+#     'corsheaders',
+#     'rest_framework.authtoken',
+#     'rest_auth',
+#     'rest_auth.registration',
+#     'django.contrib.sites',
+#     'allauth',
+#     'allauth.account',
+#     'allauth.socialaccount',
+#     'allauth.socialaccount.providers.google',
+#     'rest_framework_swagger',
+#     'drf_yasg',
+#     'rest_framework_simplejwt',
+#     'rest_framework_simplejwt.token_blacklist',
+#     'rest_framework_simplejwt.token_blacklist.apps.SimpleJWTTokenBlacklistConfig',
+#     'rest_framework_simplejwt.token_blacklist.models.BlacklistedToken',
+#     'rest_framework_simplejwt.token_blacklist.admin',
+#     'rest_framework_simplejwt.token_blacklist.serializers',
+#     'rest_framework_simplejwt.token_blacklist.views',
+#     'rest_framework_simplejwt.token_blacklist.management',
 ]
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
